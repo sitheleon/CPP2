@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a, b;
+
+    cout << "Input A: ";
+    cin >> a;
+
+    if (a < -10000) {
+        cout << "A must be bigger than -10,000" << endl;
+        return 0;
+    }
+
+    cout << "Input B: ";
+    cin >> b;
+
+    if (b > 10000) {
+        cout << "B must be smaller than 10,000" << endl;
+        return 0;
+    }
+
+    if (a > b) {
+        cout << ">" << endl;
+    } else if (a < b) {
+        cout << "<" << endl;
+    } else {
+        cout << "==" << endl;
+    }
+
+    return 0;
+}
