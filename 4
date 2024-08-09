@@ -1,0 +1,33 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+	int fc, sc;
+	cout << "First Coordinate: ";
+	cin >> fc;
+
+	cout << "Second Coordinate: ";
+	cin >> sc;
+
+	if (fc > 0 && sc > 0) {
+		cout << "Quadrant 1" << endl;
+		return 0;
+	}
+	else if (fc < 0 && sc > 0) {
+		cout << "Quadrant 2" << endl;
+		return 0;
+	}
+	else if (fc < 0 && sc < 0) {
+		cout << "Quadrant 3" << endl;
+		return 0;
+	}
+	else if (fc > 0 && sc < 0) {
+		cout << "Quadrant 4" << endl;
+		return 0;
+	}
+
+}
