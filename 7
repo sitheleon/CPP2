@@ -1,0 +1,34 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+	int d1, d2, d3;
+	int rwd = 0;
+	cout << "Enter dice 1 result: ";
+	cin >> d1;
+	cout << "Enter dice 2 result: ";
+	cin >> d2;
+	cout << "Enter dice 3 result: ";
+	cin >> d3;
+
+	if (d1 == d2 || d2 == d3) {
+		rwd = (d1 * 1000) + 10000;
+	}
+
+	else if (d1 == d2 || d1 == d3) {
+		rwd = 1000 + (d1 * 100);
+	}
+	else if (d2 == d3) {
+		rwd = 1000 + (d2 * 100);
+	}
+	else {
+		rwd = max({ d1, d2, d3 }) * 100;
+	}
+
+	cout << "Reward: " << rwd;
+
+	return 0;
+}
+
