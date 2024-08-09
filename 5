@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int h, m;
+    cout << "Enter Hour: ";
+    cin >> h;
+
+    if (0 <= h && h <= 23) {
+        cout << "Enter Minute: ";
+        cin >> m;
+
+        if (0 <= m && m <= 59) {
+            // 45분 빼기
+            m -= 45;
+
+            // 만약 분이 0보다 작으면
+            if (m < 0) {
+                h -= 1; // 시간을 1시간 줄임
+                m += 60; // 분을 60분 더함
+
+                if (h < 0) {
+                    h = 23; // 시간이 음수가 되면 23시로 설정
+                }
+            }
+
+            // 결과 출력
+            cout << h << " " << m << endl;
+        }
+        else {
+            cout << "Wrong Input" << endl;
+        }
+    }
+    else {
+        cout << "Wrong Input" << endl;
+    }
+
+    return 0;
+}
